@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Детали автора</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="topnav">
+      <a href="index.html">Авторы</a>
+      <a href="books.html">Книги</a>
+    </nav>
+    <main>
+      <h1 id="page-title">Автор</h1>
+
+      <form id="author-form" class="vertical">
+        <label>
+          Фамилия*
+          <input required name="last_name" />
+        </label>
+        <label>
+          Имя*
+          <input required name="first_name" />
+        </label>
+        <label>
+          Отчество
+          <input name="patronymic" />
+        </label>
+        <label>
+          Дата рождения*
+          <input required type="date" name="birth_date" />
+        </label>
+      </form>
+
+      <h2 class="section-gap">Книги</h2>
+      <button id="btn-add-book">➕ Добавить книгу</button>
+      <table id="books-table">
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Страницы</th>
+            <th>Жанр</th>
+            <th>Действия</th>
+          </tr>
+        </thead>
+        <tbody><!---- filled from JS ----></tbody>
+      </table>
+
+      <div class="action-bar">
+        <button id="btn-save">💾 Сохранить изменения</button>
+        <button id="btn-cancel">↩ Назад</button>
+      </div>
+    </main>
+
+    <!------- Modal ------->
+    <div class="modal" id="book-modal">
+      <div class="modal-content">
+        <h2 id="modal-title">Добавить книгу</h2>
+        <form id="book-form">
+          <label>
+            Название*
+            <input required name="title" />
+          </label>
+          <label>
+            Страницы*
+            <input required type="number" min="1" name="pages" />
+          </label>
+          <label>
+            Жанр*
+            <select required name="genre"></select>
+          </label>
+          <div style="margin-top: 1rem">
+            <button type="submit" id="modal-submit">Добавить</button>
+            <button type="button" id="modal-cancel">Отменить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="js/author_page.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Все книги</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="topnav">
+      <a href="index.html">Авторы</a>
+      <a href="books.html">Книги</a>
+    </nav>
+    <main>
+      <h1>Каталог книг</h1>
+
+      <div>
+        <label>
+          Фильтр по автору
+          <select id="filter-author">
+            <option value="">— все —</option>
+          </select>
+        </label>
+
+        <label>
+          Фильтр по жанру
+          <select id="filter-genre">
+            <option value="">— все —</option>
+          </select>
+        </label>
+      </div>
+
+      <table id="books-table">
+        <thead>
+          <tr>
+            <th>Название</th>
+            <th>Страницы</th>
+            <th>Жанр</th>
+            <th>Автор</th>
+          </tr>
+        </thead>
+        <tbody><!---- filled from JS ----></tbody>
+      </table>
+    </main>
+    <script type="module" src="js/books.js"></script>
+  </body>
+</html>

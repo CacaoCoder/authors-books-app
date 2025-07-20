@@ -1,0 +1,176 @@
+/* ------------------- Base ----------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+main {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+thead th {
+  text-align: center;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+/* ------------------- Buttons, Inputs ----------------------------------- */
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: #fff;
+  transition: background 0.15s;
+}
+
+button.primary {
+  background: #2278d0;
+  border-color: #2278d0;
+  color: #fff;
+}
+
+button.danger {
+  color: #b60000;
+  border-color: #b60000;
+}
+
+button:hover {
+  background: #eee;
+}
+
+button.primary:hover {
+  background: #1c5fa9;
+}
+
+button.danger:hover {
+  background: #ffdede;
+}
+
+/* ------------------- Toast ---------------------------------------------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+/* ------------------- Modal ---------------------------------------------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 900;
+}
+
+.modal.open {
+  display: grid;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  min-width: 320px;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal form label {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+/* ------------------- Top navigation ------------------------------------ */
+.topnav {
+  background: #f4f4f4;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.topnav a {
+  color: #2278d0;
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: 500;
+}
+
+.topnav a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------- Extra ---------------------------------------------- */
+
+form.vertical label {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+.section-gap {
+  margin-top: 1.5rem;
+}
+
+.action-bar {
+  margin: 1.5rem 0 0.5rem;
+  text-align: center;
+}
+
+.action-bar button {
+  margin: 0 0.5rem;
+}
