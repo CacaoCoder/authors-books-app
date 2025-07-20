@@ -16,3 +16,5 @@ python -m venv .venv
 
 pip install -r requirements.txt
 uvicorn backend.main:app --reload
+```
+Now open http://127.0.0.1:8000/index.html in your browser.
